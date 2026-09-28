@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b6b7d">
+<meta name="description" content="东山岛+潮汕 5天6晚自驾旅行手册：行程、住宿、美食、记账与出行准备，朋友共享只读版。">
+<title>东山岛+潮汕 · 5天6晚自驾旅行手册</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%8A%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --teal:#0b6b7d; --teal-deep:#085363; --teal-soft:#e3f2f5;
+  --coral:#ff7e5f; --coral-deep:#f4623a;
+  --sun:#ffb75e; --sand:#f5f7f8; --ink:#22333b; --muted:#6b7c85; --line:#e3e9ec;
+  --blue:#2563eb; --green:#0d9488; --orange:#f97316; --purple:#8b5cf6; --pink:#ec4899; --slate:#64748b;
+  --radius:16px; --shadow:0 4px 18px rgba(11,80,95,.08);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  background:var(--sand);color:var(--ink);line-height:1.65;font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--teal);text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:820px;margin:0 auto;padding:0 16px}
+main{padding-bottom:calc(84px + var(--safe-b))}
+.page{display:none}
+.page.active{display:block;animation:fadeIn .28s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ===== 通用组件 ===== */
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 16px;margin:14px 0;overflow:hidden}
+.page-head{background:linear-gradient(135deg,var(--teal-deep) 0%,var(--teal) 55%,#1a9aaa 100%);color:#fff;padding:26px 0 30px;position:relative;overflow:hidden}
+.page-head::after{content:"";position:absolute;right:-46px;top:-46px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.08)}
+.page-head::before{content:"";position:absolute;right:14px;bottom:-64px;width:130px;height:130px;border-radius:50%;background:rgba(255,190,120,.15)}
+.page-head h2{font-size:21px;font-weight:700;letter-spacing:.5px}
+.page-head p{font-size:12.5px;opacity:.88;margin-top:4px}
+.sec-title{display:flex;align-items:center;gap:8px;font-size:16.5px;font-weight:700;margin:20px 2px 2px}
+.sec-title .em{font-size:19px}
+.sec-sub{font-size:12.5px;color:var(--muted);margin:2px 2px 8px}
+.tag{display:inline-block;font-size:11.5px;line-height:1;padding:5px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
+.tag.t-traffic{background:#e5efff;color:var(--blue)}
+.tag.t-spot{background:#e0f5f2;color:var(--green)}
+.tag.t-food{background:#fff0e2;color:var(--orange)}
+.tag.t-stay{background:#efe9fd;color:var(--purple)}
+.tag.t-shop{background:#fde8f2;color:var(--pink)}
+.tag.t-rest{background:#eceff3;color:var(--slate)}
+.tag.opt{background:#fff;border:1.2px dashed #9db4bd;color:var(--muted)}
+.tag.todo{background:#fff4d6;color:#a1690a;font-weight:600}
+.tag.hot{background:#ffe3da;color:var(--coral-deep)}
+.pend{color:#a1690a;background:#fff4d6;border-radius:6px;padding:0 6px;font-size:12.5px;font-weight:600;display:inline-block}
+.tip-box{background:#f4f8f9;border-left:3px solid #9fc3cb;border-radius:0 10px 10px 0;padding:8px 10px;font-size:12.5px;color:#4b6169;margin-top:8px}
+.warn-box{background:#fff5ec;border-left:3px solid var(--coral);border-radius:0 10px 10px 0;padding:9px 11px;font-size:12.8px;color:#7a4630;margin-top:8px}
+.nav-btn{display:inline-flex;align-items:center;gap:5px;margin-top:9px;background:var(--teal-soft);color:var(--teal-deep);font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px}
+.nav-btn:active{opacity:.75}
+.img-ph{position:relative;border-radius:12px;background:linear-gradient(140deg,#d8eef2 0%,#c2e2e8 45%,#ffe6cf 100%);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:44px;overflow:hidden;margin-top:12px}
+.img-ph::after{content:"图片待补充";position:absolute;right:8px;bottom:8px;background:rgba(34,51,59,.62);color:#fff;font-size:11px;padding:3px 8px;border-radius:6px;letter-spacing:1px}
+.divider{height:1px;background:var(--line);margin:14px 0}
+.kv{display:flex;gap:10px;font-size:13.5px;margin:7px 0;align-items:flex-start}
+.kv .k{flex:0 0 74px;color:var(--muted);font-size:12.5px;padding-top:1px}
+.kv .v{flex:1;min-width:0;word-break:break-word}
+.note{font-size:11.5px;color:var(--muted);line-height:1.6;margin-top:10px;padding-top:8px;border-top:1px dashed var(--line)}
+
+/* ===== 首页 ===== */
+.hero{background:linear-gradient(160deg,#073d4a 0%,var(--teal-deep) 42%,var(--teal) 74%,#1d96a6 100%);color:#fff;padding:34px 0 66px;position:relative;overflow:hidden}
+.hero .glow{position:absolute;border-radius:50%;filter:blur(2px)}
+.hero .g1{width:200px;height:200px;background:radial-gradient(circle,rgba(255,190,120,.35),transparent 70%);right:-70px;top:-40px}
+.hero .g2{width:150px;height:150px;background:radial-gradient(circle,rgba(120,220,220,.25),transparent 70%);left:-50px;bottom:10px}
+.hero .inner{position:relative;z-index:1}
+.hero .kicker{display:inline-block;font-size:12px;letter-spacing:3px;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 13px;margin-bottom:14px;opacity:.92}
+.hero h1{font-size:31px;line-height:1.28;font-weight:800;letter-spacing:1px}
+.hero h1 .thin{font-weight:400;font-size:19px;display:block;margin-top:6px;opacity:.9;letter-spacing:4px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.hero .meta span{font-size:12px;background:rgba(255,255,255,.14);border-radius:999px;padding:5px 11px;backdrop-filter:blur(2px)}
+.hero .wave{position:absolute;left:0;right:0;bottom:-2px;line-height:0}
+.hero .wave svg{width:100%;height:42px;display:block}
+
+.cd-card{background:linear-gradient(135deg,#fff 0%,#fdffff 100%);border:1.5px solid #d9edf1;margin-top:-28px;position:relative;z-index:2;border-radius:var(--radius);box-shadow:0 8px 26px rgba(7,61,74,.14);padding:16px 14px 15px;text-align:center}
+.cd-card .cd-label{font-size:12.5px;color:var(--teal-deep);font-weight:700;letter-spacing:1px}
+.cd-row{display:flex;justify-content:center;gap:10px;margin-top:11px}
+.cd-cell{background:linear-gradient(160deg,var(--teal-deep),var(--teal));color:#fff;border-radius:12px;min-width:60px;padding:9px 6px 7px}
+.cd-num{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.cd-unit{font-size:11px;opacity:.85;margin-top:3px}
+.cd-live{font-size:16px;font-weight:700;color:var(--teal-deep);padding:10px 0 2px}
+
+.info-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.info-item{background:#fff;border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
+.info-item .k{font-size:11.5px;color:var(--muted);letter-spacing:1px}
+.info-item .v{font-size:14px;font-weight:650;margin-top:3px;word-break:break-word}
+@media(min-width:560px){.info-grid{grid-template-columns:1fr 1fr}}
+
+.route-card svg{width:100%;height:auto;display:block;margin-top:4px}
+.legs{margin-top:14px;display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:560px){.legs{grid-template-columns:1fr 1fr}}
+.leg{display:flex;align-items:center;gap:10px;background:#f7fafb;border-radius:12px;padding:9px 12px;font-size:12.5px;flex-wrap:wrap}
+.leg .arr{color:var(--coral-deep);font-weight:800}
+.leg b{font-weight:700}
+
+.day-grid{display:grid;grid-template-columns:1fr;gap:11px}
+@media(min-width:560px){.day-grid{grid-template-columns:1fr 1fr}}
+.day-mini{background:#fff;border-radius:14px;padding:13px 14px;box-shadow:var(--shadow);border-left:4px solid var(--teal);cursor:pointer}
+.day-mini:active{background:#f6fbfc}
+.day-mini .top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.day-mini .badge{background:var(--teal);color:#fff;font-size:11px;font-weight:700;border-radius:7px;padding:3px 8px;letter-spacing:.5px}
+.day-mini .date{font-size:12px;color:var(--muted)}
+.day-mini .t{font-size:14.5px;font-weight:700;margin-top:5px}
+.day-mini .d{font-size:12.3px;color:#48606a;margin-top:3px}
+.day-mini .staychip{margin-top:7px;font-size:11.3px;color:var(--purple);background:#efe9fd;display:inline-block;padding:3px 9px;border-radius:999px;font-weight:600}
+
+.alerts .al{display:flex;gap:10px;background:#fff;border-radius:13px;padding:12px 13px;box-shadow:var(--shadow);margin:9px 0;align-items:flex-start}
+.alerts .ic{font-size:20px;flex:0 0 26px;text-align:center;line-height:1.3}
+.alerts b{font-size:13.5px}
+.alerts p{font-size:12.3px;color:#5b6f78;margin-top:2px}
+.alerts .lv{flex:0 0 auto;font-size:10.5px;background:#ffe3da;color:var(--coral-deep);border-radius:6px;padding:2px 7px;font-weight:700;margin-top:2px}
+
+/* ===== 行程页 ===== */
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0 3px}
+.chip{background:#fff;border:1.2px solid #d5e4e8;color:var(--teal-deep);font-size:12.5px;font-weight:650;padding:7px 13px;border-radius:999px;cursor:pointer}
+.chip:active{background:var(--teal-soft)}
+.day-card{margin-top:18px}
+.day-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.day-head .badge{background:linear-gradient(135deg,var(--teal-deep),var(--teal));color:#fff;font-size:12px;font-weight:800;border-radius:9px;padding:5px 10px;letter-spacing:.5px}
+.day-head .dtitle{font-size:16.5px;font-weight:750;flex:1;min-width:140px}
+.day-head .date{font-size:12px;color:var(--muted)}
+.day-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.day-meta .m{font-size:11.5px;background:#f2f7f8;border-radius:8px;padding:4px 9px;color:#4c636c}
+.tl{margin-top:6px}
+.tl-item{display:flex;gap:11px;position:relative;padding:12px 2px 4px}
+.tl-item::before{content:"";position:absolute;left:34px;top:0;bottom:0;width:2px;background:#e7eff1}
+.tl-item:first-child::before{top:16px}
+.tl-item:last-child::before{bottom:auto;height:16px}
+.tl-time{flex:0 0 66px;font-size:12.3px;font-weight:750;color:var(--teal-deep);background:var(--teal-soft);border-radius:9px;height:fit-content;padding:6px 4px;text-align:center;line-height:1.35}
+.tl-body{flex:1;min-width:0;padding-top:2px}
+.tl-body .c{font-size:14px;font-weight:650;word-break:break-word}
+.tl-tags{margin-top:5px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.plan-a,.plan-b{border:1.5px solid #dcebee;border-radius:14px;padding:12px 10px 8px;margin-top:12px;overflow:hidden}
+.plan-a{border-color:#cfe9ec;background:#f8fcfd}
+.plan-b{border-color:#f0e3d3;background:#fdf9f3}
+.plan-head{display:flex;align-items:center;gap:8px;margin-bottom:2px;padding-left:4px;flex-wrap:wrap}
+.plan-head b{font-size:13.5px}
+.plan-head span{font-size:11.5px;color:var(--muted)}
+
+/* ===== 住宿页 ===== */
+.hotel-city{display:flex;align-items:center;gap:8px;margin-bottom:2px;flex-wrap:wrap}
+.hotel-city .flag{font-size:21px}
+.hotel-city b{font-size:15.5px}
+.hotel-city .nights{font-size:11.5px;background:var(--purple);color:#fff;padding:3px 9px;border-radius:999px;font-weight:600}
+.stay-date{display:inline-flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.stay-date span{font-size:11.8px;background:#f2effd;color:var(--purple);padding:4px 10px;border-radius:8px;font-weight:600}
+.cand{margin-top:12px;background:#f8fbfc;border:1px solid #e2edf0;border-radius:13px;padding:12px 13px}
+.cand .cname{font-size:13.5px;font-weight:700;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.cand .price{color:var(--coral-deep);font-weight:800;font-size:13.5px;margin-top:3px}
+.cand ul{margin:7px 0 0 17px;font-size:12.3px;color:#4c636c}
+.cand ul li{margin:3px 0}
+
+/* ===== 美食页 ===== */
+.food-card{position:relative}
+.food-head{display:flex;gap:12px;align-items:flex-start}
+.food-head .pic{flex:0 0 88px;height:66px;font-size:34px;margin-top:0}
+.food-head .pic.img-ph::after{font-size:9.5px;right:5px;bottom:5px;padding:2px 5px;letter-spacing:0}
+.food-title{font-size:15px;font-weight:750;line-height:1.4}
+.food-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.food-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.food-nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:10px;flex-wrap:wrap;gap:8px}
+.food-nav-row .where{font-size:12px;color:#4c636c;min-width:0;word-break:break-word}
+.city-day{font-size:11.5px;color:var(--muted);margin:16px 2px 2px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.city-day b{font-size:13.5px;color:var(--teal-deep)}
+
+/* ===== 记账页 ===== */
+.sum-card{background:linear-gradient(135deg,#0a4d5c,#0d7a8c);color:#fff;border-radius:var(--radius);padding:18px 16px;margin:14px 0;box-shadow:var(--shadow)}
+.sum-card .lab{font-size:12px;opacity:.85;letter-spacing:1px}
+.sum-card .big{font-size:26px;font-weight:800;margin-top:4px}
+.sum-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}
+.sum-grid .g{background:rgba(255,255,255,.12);border-radius:11px;padding:9px 11px}
+.sum-grid .g .k{font-size:11px;opacity:.8}
+.sum-grid .g .v{font-size:14.5px;font-weight:700;margin-top:2px}
+.exp-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 2px;border-bottom:1px solid #eef3f4;flex-wrap:wrap}
+.exp-row:last-child{border-bottom:none}
+.exp-row .n{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:650;min-width:0}
+.exp-row .n .em{font-size:18px}
+.exp-row .amount{font-size:14px;font-weight:750;color:var(--teal-deep);white-space:nowrap}
+.exp-row .ref{font-size:11.3px;color:var(--muted);width:100%;padding-left:29px;margin-top:-4px}
+@media(min-width:560px){.exp-row .ref{width:auto;margin-top:0;padding-left:0}}
+
+/* ===== 准备页 ===== */
+.prep-grid{display:grid;grid-template-columns:1fr;gap:11px}
+@media(min-width:560px){.prep-grid{grid-template-columns:1fr 1fr}}
+.contact{display:flex;align-items:center;gap:11px;padding:11px 4px;border-bottom:1px solid #eef3f4;flex-wrap:wrap}
+.contact:last-child{border-bottom:none}
+.contact .avatar{flex:0 0 40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#bfe4ea,#e7d4c2);display:flex;align-items:center;justify-content:center;font-size:18px}
+.contact .info{flex:1;min-width:120px}
+.contact .info .nm{font-size:14px;font-weight:700}
+.contact .info .rl{font-size:11.5px;color:var(--muted)}
+.contact .tel{font-size:13px;font-weight:700;color:var(--teal-deep);font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.check-list li{list-style:none;display:flex;gap:9px;align-items:flex-start;padding:7px 0;font-size:13.5px;border-bottom:1px dashed #edf2f3}
+.check-list li:last-child{border-bottom:none}
+.check-list .box{flex:0 0 17px;height:17px;border:2px solid #b9cdd3;border-radius:5px;margin-top:3px}
+.check-list .src{font-size:10.5px;color:var(--muted);background:#f0f4f5;border-radius:5px;padding:1px 6px;margin-left:5px;white-space:nowrap}
+.pit{display:flex;gap:9px;align-items:flex-start;padding:9px 2px;border-bottom:1px solid #eef3f4}
+.pit:last-child{border-bottom:none}
+.pit .cat{flex:0 0 62px;font-size:11.5px;font-weight:700;color:var(--teal-deep);background:var(--teal-soft);border-radius:7px;padding:4px 6px;text-align:center}
+.pit .lv{flex:0 0 auto;font-size:10.5px;border-radius:6px;padding:2px 6px;font-weight:700;margin-top:3px}
+.pit .lv.hi{background:#ffe3da;color:var(--coral-deep)}
+.pit .lv.mid{background:#fff3d9;color:#a1690a}
+.pit p{flex:1;min-width:0;font-size:12.6px;color:#3d545d}
+
+/* ===== 底部导航 ===== */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;padding-bottom:var(--safe-b)}
+.tabbar button{flex:1;background:none;border:none;outline:none;cursor:pointer;padding:8px 2px 7px;display:flex;flex-direction:column;align-items:center;gap:2px;color:#8fa1a8;-webkit-tap-highlight-color:transparent}
+.tabbar button svg{width:22px;height:22px}
+.tabbar button span{font-size:10.5px;font-weight:600;letter-spacing:.5px}
+.tabbar button.on{color:var(--teal-deep)}
+.tabbar button.on span{font-weight:800}
+footer.foot{padding:20px 16px 8px;text-align:center;font-size:11px;color:#93a6ad;line-height:1.7}
+footer.foot .aigc{display:inline-block;background:#eef2f3;border-radius:6px;padding:2px 8px;margin-top:4px;font-size:10px;color:#8fa1a8}
+@media(min-width:560px){body{font-size:15.5px}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+
+<main>
+
+<!-- ================= 1 首页 ================= -->
+<section class="page active" id="page-home">
+  <div class="hero">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="wrap inner">
+      <div class="kicker">NATIONAL DAY · ROAD TRIP</div>
+      <h1>东山岛 + 潮汕<span class="thin">5 天 6 晚 · 自驾旅行手册</span></h1>
+      <div class="meta">
+        <span>🚗 浙江·台州出发</span>
+        <span>📅 9.30 晚 — 10.5 傍晚</span>
+        <span>🌊 东山岛 → 潮州 → 汕头</span>
+        <span>🎯 国庆错峰夜行</span>
+      </div>
+    </div>
+    <div class="wave"><svg viewBox="0 0 1200 42" preserveAspectRatio="none"><path d="M0,22 C150,44 350,0 600,20 C850,40 1050,4 1200,26 L1200,42 L0,42 Z" fill="rgba(255,255,255,.16)"/><path d="M0,30 C200,8 400,44 600,26 C800,10 1000,42 1200,22 L1200,42 L0,42 Z" fill="#f5f7f8"/></svg></div>
+  </div>
+
+  <div class="wrap">
+    <!-- 倒计时 -->
+    <div class="cd-card">
+      <div class="cd-label" id="cd-title">距离出发（9月30日 20:00 台州启程）</div>
+      <div class="cd-row" id="cd">
+        <div class="cd-cell"><div class="cd-num" id="cd-d">--</div><div class="cd-unit">天</div></div>
+        <div class="cd-cell"><div class="cd-num" id="cd-h">--</div><div class="cd-unit">时</div></div>
+        <div class="cd-cell"><div class="cd-num" id="cd-m">--</div><div class="cd-unit">分</div></div>
+        <div class="cd-cell"><div class="cd-num" id="cd-s">--</div><div class="cd-unit">秒</div></div>
+      </div>
+    </div>
+
+    <!-- 出行信息 -->
+    <div class="sec-title"><span class="em">🧾</span>出行信息</div>
+    <div class="info-grid">
+      <div class="info-item"><div class="k">出发地</div><div class="v">浙江·台州</div></div>
+      <div class="info-item"><div class="k">目的地</div><div class="v">东山岛 → 潮州 → 汕头</div></div>
+      <div class="info-item"><div class="k">出发时间</div><div class="v">9月30日（周三）20:00 夜间出发</div></div>
+      <div class="info-item"><div class="k">返回时间</div><div class="v">10月5日（周一）傍晚抵达台州</div></div>
+      <div class="info-item"><div class="k">行程天数</div><div class="v">5天6晚（Day0～Day5）</div></div>
+      <div class="info-item"><div class="k">交通方式</div><div class="v">自驾 · G15沈海高速为主</div></div>
+      <div class="info-item"><div class="k">同行人数</div><div class="v"><span class="pend">待补充</span><div style="font-size:11.5px;color:var(--muted);margin-top:3px">攻略提示"多轮换驾驶员"，至少含 2 名驾驶者</div></div></div>
+      <div class="info-item"><div class="k">车辆信息</div><div class="v">车型 / 车牌 <span class="pend">待补充</span><div style="font-size:11.5px;color:var(--muted);margin-top:3px">避坑指南提醒"提前规划充电点"，如为新能源车请提前规划沿途充电</div></div></div>
+      <div class="info-item"><div class="k">住宿节奏</div><div class="v">东山岛 2晚 → 潮州 1晚 → 汕头 2晚</div></div>
+      <div class="info-item"><div class="k">国庆核心策略</div><div class="v">错峰夜行 · 早出发 · 多轮换驾驶员</div></div>
+    </div>
+
+    <!-- 路线全景 -->
+    <div class="sec-title"><span class="em">🗺️</span>路线全景</div>
+    <div class="sec-sub">台州 → 东山岛 → 潮州 → 汕头 → 台州 · 全程约 1875 km</div>
+    <div class="card route-card">
+      <svg viewBox="0 0 720 200" role="img" aria-label="路线全景图">
+        <defs>
+          <linearGradient id="rg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#0b6b7d"/><stop offset="1" stop-color="#1a9aaa"/>
+          </linearGradient>
+        </defs>
+        <path d="M 612 100 C 490 18, 210 18, 82 100" fill="none" stroke="#ff9d7a" stroke-width="2.5" stroke-dasharray="7 6" stroke-linecap="round"/>
+        <text x="347" y="42" text-anchor="middle" font-size="12.5" fill="#f4623a" font-weight="700">返程 约880km · 约9.5h（10.5 早出发）</text>
+        <line x1="82" y1="128" x2="612" y2="128" stroke="url(#rg)" stroke-width="3.4" stroke-linecap="round"/>
+        <g font-size="13.5" font-weight="700" fill="#22333b" text-anchor="middle">
+          <circle cx="82" cy="128" r="21" fill="#0b6b7d"/><text x="82" y="133" fill="#fff" font-size="13">台州</text>
+          <text x="82" y="166" font-size="11" fill="#6b7c85" font-weight="400">出发·返程点</text>
+          <circle cx="292" cy="128" r="21" fill="#12849a"/><text x="292" y="133" fill="#fff" font-size="12">东山岛</text>
+          <text x="292" y="166" font-size="11" fill="#6b7c85" font-weight="400">住2晚</text>
+          <circle cx="472" cy="128" r="21" fill="#12849a"/><text x="472" y="133" fill="#fff" font-size="13">潮州</text>
+          <text x="472" y="166" font-size="11" fill="#6b7c85" font-weight="400">住1晚</text>
+          <circle cx="612" cy="128" r="21" fill="#12849a"/><text x="612" y="133" fill="#fff" font-size="13">汕头</text>
+          <text x="612" y="166" font-size="11" fill="#6b7c85" font-weight="400">住2晚</text>
+        </g>
+        <g font-size="11.8" fill="#4c636c" text-anchor="middle">
+          <text x="187" y="115">830km · 约9h</text>
+          <text x="382" y="115">115km · 1.5h</text>
+          <text x="542" y="115">50km · 1h</text>
+        </g>
+        <g font-size="14" text-anchor="middle">
+          <text x="187" y="93">🚗</text><text x="382" y="93">🚗</text><text x="542" y="93">🚗</text>
+        </g>
+      </svg>
+      <div class="divider"></div>
+      <div class="legs">
+        <div class="leg"><b>台州 → 东山岛</b><span class="arr">→</span>约830km·约9小时<span style="color:var(--muted)">9.30 晚夜行</span></div>
+        <div class="leg"><b>东山岛 → 潮州</b><span class="arr">→</span>约115km·1.5小时<span style="color:var(--muted)">10.2 午前出发</span></div>
+        <div class="leg"><b>潮州 → 汕头</b><span class="arr">→</span>约50km·1小时<span style="color:var(--muted)">10.3 午后出发</span></div>
+        <div class="leg"><b>汕头 → 台州</b><span class="arr">⟲</span>约880km·9.5小时<span style="color:var(--muted)">10.5 早出发</span></div>
+      </div>
+    </div>
+
+    <!-- 每日概览 -->
+    <div class="sec-title"><span class="em">📅</span>每日概览</div>
+    <div class="day-grid">
+      <div class="day-mini" data-goto="d0" id="home-d0"><div class="top"><span class="badge">Day0</span><span class="date">9.30 周三</span></div><div class="t">夜行出发 · 台州 → 东山岛</div><div class="d">20:00 上高速，凌晨 3–5 点抵达入住</div><div class="staychip">宿：东山岛（铜陵镇/金銮湾）</div></div>
+      <div class="day-mini" data-goto="d1" id="home-d1"><div class="top"><span class="badge">Day1</span><span class="date">10.1 周四</span></div><div class="t">东山岛环岛游</div><div class="d">金銮湾日出 → 南屿双面海 → 苏峰山 → 南门湾日落</div><div class="staychip">宿：东山岛（连住）</div></div>
+      <div class="day-mini" data-goto="d2" id="home-d2"><div class="top"><span class="badge">Day2</span><span class="date">10.2 周五</span></div><div class="t">东山岛 → 潮州 · 古城初见</div><div class="d">潮州古城打卡 + 广济桥灯光秀 + 夜市觅食</div><div class="staychip">宿：潮州（牌坊街外围）</div></div>
+      <div class="day-mini" data-goto="d3" id="home-d3"><div class="top"><span class="badge">Day3</span><span class="date">10.3 周六</span></div><div class="t">潮州 → 汕头 · 老城觅食</div><div class="d">小公园骑楼老街 + 龙眼南路美食街</div><div class="staychip">宿：汕头（市区）</div></div>
+      <div class="day-mini" data-goto="d4" id="home-d4"><div class="top"><span class="badge">Day4</span><span class="date">10.4 周日</span></div><div class="t">南澳岛（方案A）/ 汕头逛吃（方案B）</div><div class="d">A：早7点上岛中午前下岛 · B：老街松弛逛吃</div><div class="staychip">宿：汕头（连住）</div></div>
+      <div class="day-mini" data-goto="d5" id="home-d5"><div class="top"><span class="badge">Day5</span><span class="date">10.5 周一</span></div><div class="t">返程 · 汕头 → 台州</div><div class="d">早 6–7 点出发，傍晚抵达台州</div><div class="staychip">行程收官</div></div>
+    </div>
+
+    <!-- 国庆重点提醒 -->
+    <div class="sec-title"><span class="em">⚠️</span>国庆重点提醒（务必先看）</div>
+    <div class="alerts">
+      <div class="al"><div class="ic">⛰️</div><div><b>苏峰山：旺季私家车禁上环岛路</b><p>山脚停车场停车，租电驴或坐接驳车上山看山海</p></div><span class="lv">紧急度高</span></div>
+      <div class="al"><div class="ic">🌊</div><div><b>南屿双面海 / 鱼骨沙洲：出行前务必查潮汐表</b><p>涨潮会断路/困礁石，不要冒险</p></div><span class="lv">紧急度高</span></div>
+      <div class="al"><div class="ic">🛣️</div><div><b>高速高峰：9.30 晚、10.5 全天</b><p>务必多轮换驾驶员；电车提前规划充电点</p></div><span class="lv">紧急度高</span></div>
+      <div class="al"><div class="ic">🅿️</div><div><b>住宿停车：全程都要带停车位</b><p>东山岛选金銮湾、潮州住牌坊街外围、汕头住市区连锁</p></div><span class="lv">紧急度高</span></div>
+    </div>
+
+    <footer class="foot">
+      只读分享版 · 无需登录与编辑<br>内容依据《东山岛+潮汕5天6晚自驾行程表》整理生成 · 订单/同行/记账资料待补充后更新<br><span class="aigc">AI生成内容标识 · AIGC:13804d57-d4f0-48e3-8b0d-2bed09021dae</span>
+    </footer>
+  </div>
+</section>
+
+<!-- ================= 2 行程 ================= -->
+<section class="page" id="page-itinerary">
+  <div class="page-head"><div class="wrap"><h2>🚗 行程</h2><p>Day0–Day5 · 每日路线 / 时间 / 里程 / 景点与用餐 · 地点可一键导航</p></div></div>
+  <div class="wrap">
+    <div class="chip-row">
+      <button class="chip" data-goto="d0">Day0 夜行出发</button>
+      <button class="chip" data-goto="d1">Day1 东山岛</button>
+      <button class="chip" data-goto="d2">Day2 潮州</button>
+      <button class="chip" data-goto="d3">Day3 汕头</button>
+      <button class="chip" data-goto="d4">Day4 南澳/逛吃</button>
+      <button class="chip" data-goto="d5">Day5 返程</button>
+    </div>
+
+    <!-- Day0 -->
+    <div class="card day-card" id="d0">
+      <div class="day-head"><span class="badge">Day0</span><span class="dtitle">夜行出发 · 台州 → 东山岛</span><span class="date">9.30 周三</span></div>
+      <div class="day-meta">
+        <span class="m">🛣️ 约830km · 约9小时</span><span class="m">🛣️ G15 沈海高速</span><span class="m">🌙 错峰夜行</span>
+      </div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-time">20:00</div><div class="tl-body"><div class="c">台州上高速，走 G15 沈海高速，夜间出发</div><div class="tl-tags"><span class="tag t-traffic">交通</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=G15沈海高速" target="_blank" rel="noopener">🧭 导航</a></div><div class="warn-box">夜间行车，轮换开车，服务区间断休息，不赶路，安全第一</div></div></div>
+        <div class="tl-item"><div class="tl-time">凌晨<br>3–5点</div><div class="tl-body"><div class="c">抵达东山岛，直接入住酒店/民宿休息</div><div class="tl-tags"><span class="tag t-stay">住宿</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛" target="_blank" rel="noopener">🧭 导航东山岛</a></div><div class="tip-box">预订时确认有免费停车位</div></div></div>
+      </div>
+      <div class="divider"></div>
+      <div class="kv"><div class="k">当日住宿</div><div class="v">东山岛（铜陵镇 / 金銮湾）<span class="pend">订单待补充</span></div></div>
+      <div class="kv"><div class="k">服务区</div><div class="v">夜间每 2 小时左右进服务区轮换休息（具体服务区名单 <span class="pend">待补充</span>）</div></div>
+    </div>
+
+    <!-- Day1 -->
+    <div class="card day-card" id="d1">
+      <div class="day-head"><span class="badge">Day1</span><span class="dtitle">东山岛环岛游</span><span class="date">10.1 周四</span></div>
+      <div class="day-meta">
+        <span class="m">🛵 岛内电驴/自驾环线</span><span class="m">🌅 日出→日落全天</span>
+      </div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-time">清晨</div><div class="tl-body"><div class="c">金銮湾镜面沙滩看日出</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=金銮湾游客中心停车场" target="_blank" rel="noopener">🧭 导航·金銮湾游客中心停车场</a></div><div class="tip-box">退潮时镜面效果最好；清晨光线最佳</div></div></div>
+        <div class="tl-item"><div class="tl-time">上午</div><div class="tl-body"><div class="c">租电动车逛南门湾、顶街、文公祠（左耳天台）</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛顶街" target="_blank" rel="noopener">🧭 导航顶街</a><a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛文公祠" target="_blank" rel="noopener">🧭 导航文公祠</a></div><div class="tip-box">彩色渔村适合拍照；顶街为约600年闽南古街，文公祠可俯瞰南门湾全景（《左耳》取景地）</div></div></div>
+        <div class="tl-item"><div class="tl-time">上午</div><div class="tl-body"><div class="c">南屿双面海</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=南屿双面海" target="_blank" rel="noopener">🧭 导航</a></div><div class="warn-box">⚠️ 提前查潮汐！涨潮会断路；《你的婚礼》绿色灯塔取景地，只有退潮才露出通向灯塔的沙滩路，千万不要滞留岛上</div></div></div>
+        <div class="tl-item"><div class="tl-time">中午</div><div class="tl-body"><div class="c">铜陵镇本地排档吃海鲜</div><div class="tl-tags"><span class="tag t-food">美食</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛铜陵镇" target="_blank" rel="noopener">🧭 导航铜陵镇</a></div><div class="tip-box">避开南门湾街边大排档；点菜先问价、看称重；停车优先七星停车场 / 铜陵游客集散中心</div></div></div>
+        <div class="tl-item"><div class="tl-time">下午</div><div class="tl-body"><div class="c">苏峰山环岛路，电驴骑行看山海</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=苏峰山" target="_blank" rel="noopener">🧭 导航苏峰山</a></div><div class="warn-box">节假日私家车禁上环岛路：车停南北生态停车场，换乘观光车（约10元/人）或租电动车；山路弯道多需低速慢行</div></div></div>
+        <div class="tl-item"><div class="tl-time">下午</div><div class="tl-body"><div class="c">马銮湾沙滩踏浪玩水</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=马銮湾" target="_blank" rel="noopener">🧭 导航</a></div><div class="tip-box">优质海滨浴场，注意防晒</div></div></div>
+        <div class="tl-item"><div class="tl-time">傍晚</div><div class="tl-body"><div class="c">澳角村：渔村礁石灯塔</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=澳角村" target="_blank" rel="noopener">🧭 导航</a></div><div class="tip-box">小众渔村，适合拍照</div></div></div>
+        <div class="tl-item"><div class="tl-time">傍晚</div><div class="tl-body"><div class="c">返回南门湾看日落</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛南门湾" target="_blank" rel="noopener">🧭 导航南门湾</a></div><div class="tip-box">橘子海日落收官</div></div></div>
+        <div class="tl-item"><div class="tl-time">晚上</div><div class="tl-body"><div class="c">铜陵镇吃小吃、四果汤</div><div class="tl-tags"><span class="tag t-food">美食</span></div></div></div>
+      </div>
+      <div class="divider"></div>
+      <div class="kv"><div class="k">当日住宿</div><div class="v">东山岛（连住）<span class="pend">订单待补充</span></div></div>
+    </div>
+
+    <!-- Day2 -->
+    <div class="card day-card" id="d2">
+      <div class="day-head"><span class="badge">Day2</span><span class="dtitle">东山岛 → 潮州 · 古城初见</span><span class="date">10.2 周五</span></div>
+      <div class="day-meta">
+        <span class="m">🛣️ 东山岛→潮州 约115km · 约1.5小时</span><span class="m">🚶 古城步行游览</span>
+      </div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-time">早上</div><div class="tl-body"><div class="c">可选：风动石景区（门票约45元）、铜山古城</div><div class="tl-tags"><span class="tag opt">景点·可选</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=东山风动石景区" target="_blank" rel="noopener">🧭 导航风动石</a></div><div class="tip-box">不想去可睡懒觉；风动石景区内含铜山古城、关帝庙</div></div></div>
+        <div class="tl-item"><div class="tl-time">11:30</div><div class="tl-body"><div class="c">出发前往潮州（约1.5小时）</div><div class="tl-tags"><span class="tag t-traffic">交通</span></div><div class="tip-box">避开午后拥堵</div></div></div>
+        <div class="tl-item"><div class="tl-time">下午</div><div class="tl-body"><div class="c">潮州古城：牌坊街、开元寺、广济桥、广济楼打卡</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=潮州牌坊街" target="_blank" rel="noopener">🧭 导航牌坊街</a><a class="nav-btn" href="https://uri.amap.com/search?keyword=广济桥" target="_blank" rel="noopener">🧭 导航广济桥</a></div><div class="tip-box">车子停酒店，步行进古城</div></div></div>
+        <div class="tl-item"><div class="tl-time">傍晚</div><div class="tl-body"><div class="c">广济桥灯光秀</div><div class="tl-tags"><span class="tag t-spot">景点</span></div><div class="tip-box">傍晚去看灯光效果最佳</div></div></div>
+        <div class="tl-item"><div class="tl-time">晚上</div><div class="tl-body"><div class="c">古城夜市闲逛</div><div class="tl-tags"><span class="tag t-food">美食</span></div><div class="tip-box">美食：卤鹅、蚝烙、牛肉粿条汤、鸭母捻、腐乳饼</div></div></div>
+      </div>
+      <div class="divider"></div>
+      <div class="kv"><div class="k">当日住宿</div><div class="v">潮州（牌坊街外围）<span class="pend">订单待补充</span></div></div>
+    </div>
+
+    <!-- Day3 -->
+    <div class="card day-card" id="d3">
+      <div class="day-head"><span class="badge">Day3</span><span class="dtitle">潮州 → 汕头 · 老城觅食</span><span class="date">10.3 周六</span></div>
+      <div class="day-meta">
+        <span class="m">🛣️ 潮州→汕头 约50km · 约1小时</span><span class="m">🥢 牛肉火锅×2</span>
+      </div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-time">上午</div><div class="tl-body"><div class="c">可选：韩文公祠、滨江长廊</div><div class="tl-tags"><span class="tag opt">景点·可选</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=韩文公祠" target="_blank" rel="noopener">🧭 导航韩文公祠</a></div><div class="tip-box">不想逛可睡到自然醒吃早茶</div></div></div>
+        <div class="tl-item"><div class="tl-time">中午</div><div class="tl-body"><div class="c">潮州吃牛肉火锅</div><div class="tl-tags"><span class="tag t-food">美食</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=潮州牛肉火锅" target="_blank" rel="noopener">🧭 导航古城牛肉店</a></div></div></div>
+        <div class="tl-item"><div class="tl-time">下午</div><div class="tl-body"><div class="c">驱车前往汕头（约1小时）</div><div class="tl-tags"><span class="tag t-traffic">交通</span></div></div></div>
+        <div class="tl-item"><div class="tl-time">下午</div><div class="tl-body"><div class="c">小公园骑楼老街、复古建筑群、西堤公园</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=汕头小公园" target="_blank" rel="noopener">🧭 导航小公园</a></div><div class="tip-box">老市区怀旧路线</div></div></div>
+        <div class="tl-item"><div class="tl-time">晚上</div><div class="tl-body"><div class="c">龙眼南路美食街</div><div class="tl-tags"><span class="tag t-food">美食</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=龙眼南路美食街" target="_blank" rel="noopener">🧭 导航美食街</a></div><div class="warn-box">牛肉火锅、肠粉、生腌、粿品；生腌肠胃弱者慎选，备肠胃药</div></div></div>
+      </div>
+      <div class="divider"></div>
+      <div class="kv"><div class="k">当日住宿</div><div class="v">汕头（市区）<span class="pend">订单待补充</span></div></div>
+    </div>
+
+    <!-- Day4 -->
+    <div class="card day-card" id="d4">
+      <div class="day-head"><span class="badge">Day4</span><span class="dtitle">南澳岛 或 汕头逛吃（二选一）</span><span class="date">10.4 周日</span></div>
+      <div class="plan-a">
+        <div class="plan-head"><span class="tag t-spot">方案A</span><b>南澳岛一日</b><span>适合想看海岛风光</span></div>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-time">早7:00</div><div class="tl-body"><div class="c">走南澳大桥上岛</div><div class="tl-tags"><span class="tag t-traffic">交通</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=南澳大桥" target="_blank" rel="noopener">🧭 导航南澳大桥</a></div><div class="warn-box">⚠️ 国庆大桥极易堵车，务必早出发</div></div></div>
+          <div class="tl-item"><div class="tl-time">上午</div><div class="tl-body"><div class="c">长山尾灯塔、北回归线标志、青澳湾沙滩</div><div class="tl-tags"><span class="tag t-spot">景点</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=南澳岛青澳湾" target="_blank" rel="noopener">🧭 导航青澳湾</a></div></div></div>
+          <div class="tl-item"><div class="tl-time">中午前</div><div class="tl-body"><div class="c">下岛离开返回汕头市区</div><div class="tl-tags"><span class="tag t-traffic">交通</span></div><div class="tip-box">中午前下岛，避开拥堵</div></div></div>
+          <div class="tl-item"><div class="tl-time">下午</div><div class="tl-body"><div class="c">汕头市区采购伴手礼（牛肉丸等）</div><div class="tl-tags"><span class="tag t-shop">购物</span></div></div></div>
+        </div>
+      </div>
+      <div class="plan-b">
+        <div class="plan-head"><span class="tag t-rest">方案B</span><b>轻松版 · 汕头老街逛吃</b><span>不去南澳岛的松弛版本</span></div>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-time">全天</div><div class="tl-body"><div class="c">汕头老市区老街休闲逛吃，吃各类小吃</div><div class="tl-tags"><span class="tag t-food">美食</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=汕头小公园" target="_blank" rel="noopener">🧭 导航老市区</a></div></div></div>
+          <div class="tl-item"><div class="tl-time">全天</div><div class="tl-body"><div class="c">买伴手礼、休整，为返程蓄力</div><div class="tl-tags"><span class="tag t-rest">休整</span></div></div></div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="kv"><div class="k">当日住宿</div><div class="v">汕头（连住）<span class="pend">订单待补充</span></div></div>
+    </div>
+
+    <!-- Day5 -->
+    <div class="card day-card" id="d5">
+      <div class="day-head"><span class="badge">Day5</span><span class="dtitle">返程 · 汕头 → 台州</span><span class="date">10.5 周一</span></div>
+      <div class="day-meta">
+        <span class="m">🛣️ 约880km · 约9.5小时</span><span class="m">🌅 早出发避堵</span>
+      </div>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-time">早6–7点</div><div class="tl-body"><div class="c">汕头出发返程回台州</div><div class="tl-tags"><span class="tag t-traffic">交通</span></div><div class="warn-box">避开国庆返程高速午后大堵车，务必早出发</div></div></div>
+        <div class="tl-item"><div class="tl-time">途中</div><div class="tl-body"><div class="c">多进服务区、轮换开车、注意休息</div><div class="tl-tags"><span class="tag t-traffic">交通</span></div><div class="tip-box">电车：服务区充电排队时可就近下高速充电</div></div></div>
+        <div class="tl-item"><div class="tl-time">傍晚</div><div class="tl-body"><div class="c">抵达台州，行程结束 🎉</div><div class="tl-tags"><span class="tag t-rest">收官</span></div></div></div>
+      </div>
+    </div>
+    <footer class="foot">导航按钮调起高德地图（未安装则打开网页版，地址也可复制到其他地图使用）</footer>
+  </div>
+</section>
+
+<!-- ================= 3 住宿 ================= -->
+<section class="page" id="page-hotels">
+  <div class="page-head"><div class="wrap"><h2>🏨 住宿</h2><p>东山岛 2晚 → 潮州 1晚 → 汕头 2晚 · 订单信息待补充</p></div></div>
+  <div class="wrap">
+
+    <!-- 东山岛 -->
+    <div class="card">
+      <div class="hotel-city"><span class="flag">🌊</span><b>第一站 · 东山岛</b><span class="nights">住 2 晚</span></div>
+      <div class="stay-date"><span>入住 10.1 凌晨（9.30 夜出发）</span><span>退房 10.2 上午</span><span>共 2 晚</span></div>
+      <div class="img-ph">🏖️</div>
+      <div style="margin-top:12px">
+        <div class="kv"><div class="k">推荐区域</div><div class="v">金銮湾（自驾首选）：免费停车、安静、可看日出<br>铜陵镇（想逛吃）：小吃集中，逛吃方便</div></div>
+        <div class="kv"><div class="k">酒店名称</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">详细地址</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">房型 / 房间</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">入住人</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">订单号</div><div class="v"><span class="pend">待补充</span></div></div>
+      </div>
+      <div class="warn-box">避雷：南门湾老城区停车贵、车位少，不适合自驾住里面；避开南门湾内部民宿，预订时确认有免费停车位</div>
+      <a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛金銮湾" target="_blank" rel="noopener">🧭 导航金銮湾</a>
+      <a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛铜陵镇" target="_blank" rel="noopener">🧭 导航铜陵镇</a>
+    </div>
+
+    <!-- 潮州 -->
+    <div class="card">
+      <div class="hotel-city"><span class="flag">🏮</span><b>第二站 · 潮州</b><span class="nights">住 1 晚</span></div>
+      <div class="stay-date"><span>入住 10.2 下午</span><span>退房 10.3 上午</span><span>共 1 晚</span></div>
+      <div class="img-ph">🏯</div>
+      <div style="margin-top:12px">
+        <div class="kv"><div class="k">推荐区域</div><div class="v">牌坊街外围：步行可达古城，酒店自带停车位</div></div>
+        <div class="kv"><div class="k">酒店名称</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">详细地址</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">房型 / 房间</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">入住人</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">订单号</div><div class="v"><span class="pend">待补充</span></div></div>
+      </div>
+      <div class="warn-box">避雷：不要订古城小巷内民宿，车开不进去，停车困难</div>
+      <a class="nav-btn" href="https://uri.amap.com/search?keyword=潮州牌坊街" target="_blank" rel="noopener">🧭 导航牌坊街</a>
+    </div>
+
+    <!-- 汕头 -->
+    <div class="card">
+      <div class="hotel-city"><span class="flag">🏙️</span><b>第三站 · 汕头</b><span class="nights">住 2 晚</span></div>
+      <div class="stay-date"><span>入住 10.3（周六）</span><span>退房 10.5（周一）</span><span>共 2 晚</span></div>
+      <div class="img-ph">🛏️</div>
+      <div style="margin-top:12px">
+        <div class="kv"><div class="k">推荐区域</div><div class="v">市区连锁酒店（万象城商圈一带）：停车方便，去美食街、南澳岛都顺路</div></div>
+        <div class="kv"><div class="k">已订酒店</div><div class="v"><span class="pend">待补充</span>（订单未提供，下方为候选参考）</div></div>
+        <div class="kv"><div class="k">详细地址</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">房型 / 房间</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">入住人</div><div class="v"><span class="pend">待补充</span></div></div>
+        <div class="kv"><div class="k">订单号</div><div class="v"><span class="pend">待补充</span></div></div>
+      </div>
+      <div class="cand">
+        <div class="cname">🏨 利怡酒店（汕头高铁站万象城店）<span class="tag hot">首推</span></div>
+        <div class="price">约 464 元/晚（含早）</div>
+        <ul>
+          <li>4星 · 8.2分（1266条评价）· 距万象城约700米，龙眼南路美食街步行即达</li>
+          <li>投屏电视、免费停车、洗衣房、健身中心；实测当晚仅剩1间</li>
+          <li>单体酒店，下单前翻看最近差评（卫生/隔音）</li>
+        </ul>
+      </div>
+      <div class="cand">
+        <div class="cname">🏨 7天酒店（万象城金园路店）<span class="tag t-stay">备选</span></div>
+        <div class="price">约 484 元/晚</div>
+        <ul>
+          <li>8.5分（758评）· 锦江集团卫生标准；金平区金园路53号，万象城北约1.2公里</li>
+          <li>经济型定位，房间偏小、无早餐；实测仅剩1间</li>
+        </ul>
+      </div>
+      <div class="cand">
+        <div class="cname">🏨 Never Sleeps（龙眼南路店）<span class="tag t-stay">低价</span></div>
+        <div class="price">约 439 元/晚</div>
+        <ul><li>就在龙眼南路美食街上；新开业评价少，需自行查看点评</li></ul>
+      </div>
+      <div class="cand">
+        <div class="cname">🏨 海友酒店（万象城龙眼南路店）<span class="tag t-stay">卫生优</span></div>
+        <div class="price">约 560–700 元（券后约 500 内）</div>
+        <ul><li>华住旗下 · 9.3分（136评）；建议在"华住会"APP查会员价</li></ul>
+      </div>
+      <div class="tip-box">候选价格为 2026-09-23 晚 Agoda/Klook/Trip.com 实测，随房态波动；建议立即锁定"可免费取消"房型占位再比价；广东"金秋文旅消费季"消费券每天 10:00 开抢（满500减100等档位，携程/美团/飞猪/同程/云闪付均可领）</div>
+      <a class="nav-btn" href="https://uri.amap.com/search?keyword=汕头万象城" target="_blank" rel="noopener">🧭 导航万象城商圈</a>
+      <a class="nav-btn" href="https://uri.amap.com/search?keyword=汕头市金园路53号" target="_blank" rel="noopener">🧭 导航金园路53号</a>
+    </div>
+    <footer class="foot">住宿节奏：东山岛 2 晚（10.1 凌晨入住）→ 潮州 1 晚 → 汕头 2 晚；具体酒店订单信息补充后更新</footer>
+  </div>
+</section>
+
+<!-- ================= 4 美食 ================= -->
+<section class="page" id="page-food">
+  <div class="page-head"><div class="wrap"><h2>🍜 美食</h2><p>东山岛 → 潮州 → 汕头 · 按天打卡 · 附导航入口</p></div></div>
+  <div class="wrap">
+
+    <div class="city-day">🚩 <b>Day1 · 10.1 东山岛（铜陵镇）</b></div>
+    <div class="card food-card">
+      <div class="food-head">
+        <div class="img-ph pic">🦑</div>
+        <div><div class="food-title">铜陵镇本地排档 · 海鲜正餐</div><div class="food-sub">Day1 午餐 · 主打本地海鲜</div></div>
+      </div>
+      <div class="food-tags"><span class="tag t-food">小管（鱿鱼）</span><span class="tag t-food">海蛎煎</span><span class="tag t-food">姜母鸭</span><span class="tag t-food">鱼丸</span><span class="tag t-food">白灼小管</span><span class="tag t-food">肖米</span></div>
+      <div class="warn-box">海鲜点菜先问单价、看清称重再下单；景区门口排档不要吃</div>
+      <div class="food-nav-row"><span class="where">📍 东山岛铜陵镇（顶街/团结路小吃一条街）· 具体店名待补充</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛铜陵镇" target="_blank" rel="noopener">🧭 导航</a></div>
+    </div>
+    <div class="card food-card">
+      <div class="food-head">
+        <div class="img-ph pic">🍧</div>
+        <div><div class="food-title">铜陵镇街头小吃 · 逛吃夜宵</div><div class="food-sub">Day1 晚餐 · 小吃与甜品</div></div>
+      </div>
+      <div class="food-tags"><span class="tag t-food">四果汤（解暑甜品）</span><span class="tag t-food">猫仔粥</span><span class="tag t-food">蚵仔煎</span><span class="tag t-food">小媳妇甜汤</span></div>
+      <div class="food-nav-row"><span class="where">📍 铜陵镇街头/顶街 · 具体店名待补充</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=东山岛顶街" target="_blank" rel="noopener">🧭 导航</a></div>
+    </div>
+
+    <div class="city-day">🏮 <b>Day2 晚 – Day3 午 · 潮州古城</b></div>
+    <div class="card food-card">
+      <div class="food-head">
+        <div class="img-ph pic">🦢</div>
+        <div><div class="food-title">牌坊街老字号 · 潮州菜</div><div class="food-sub">Day2 晚（古城夜市）为主</div></div>
+      </div>
+      <div class="food-tags"><span class="tag t-food">卤狮头鹅</span><span class="tag t-food">蚝烙</span><span class="tag t-food">牛肉粿条汤</span><span class="tag t-food">鸭母捻</span><span class="tag t-food">腐乳饼</span><span class="tag t-food">糖葱薄饼</span><span class="tag t-food">粿条汤</span></div>
+      <div class="food-nav-row"><span class="where">📍 潮州牌坊街（老字号/小吃店/甜品店/古城小吃摊）· 具体店名待补充</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=潮州牌坊街" target="_blank" rel="noopener">🧭 导航</a></div>
+    </div>
+    <div class="card food-card">
+      <div class="food-head">
+        <div class="img-ph pic">🍲</div>
+        <div><div class="food-title">古城牛肉店 · 潮州牛肉火锅</div><div class="food-sub">Day2 或 Day3 午餐</div></div>
+      </div>
+      <div class="food-tags"><span class="tag t-food">现切牛肉火锅</span></div>
+      <div class="food-nav-row"><span class="where">📍 潮州古城 · 具体店名待补充</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=潮州牛肉火锅" target="_blank" rel="noopener">🧭 导航</a></div>
+    </div>
+
+    <div class="city-day">🌃 <b>Day3 晚 – Day4 · 汕头</b></div>
+    <div class="card food-card">
+      <div class="food-head">
+        <div class="img-ph pic">🥩</div>
+        <div><div class="food-title">龙眼南路美食街</div><div class="food-sub">Day3 晚餐 · 汕头美食主战场</div></div>
+      </div>
+      <div class="food-tags"><span class="tag t-food">现切牛肉火锅</span><span class="tag t-food">肠粉</span><span class="tag t-food">生腌</span><span class="tag t-food">粿品</span><span class="tag t-food">反沙芋头</span></div>
+      <div class="warn-box">生腌肠胃弱者慎选，备肠胃药</div>
+      <div class="food-nav-row"><span class="where">📍 汕头龙眼南路美食街（老市区街边老店/粿品店/老字号甜品店）· 具体店名待补充</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=龙眼南路美食街" target="_blank" rel="noopener">🧭 导航</a></div>
+    </div>
+    <div class="card food-card">
+      <div class="food-head">
+        <div class="img-ph pic">🍢</div>
+        <div><div class="food-title">汕头老市区逛吃（方案B全天）</div><div class="food-sub">Day4 方案B · 各类小吃休闲吃</div></div>
+      </div>
+      <div class="food-tags"><span class="tag t-food">肠粉</span><span class="tag t-food">粿品</span><span class="tag t-food">牛肉丸伴手礼</span></div>
+      <div class="food-nav-row"><span class="where">📍 汕头小公园老市区 · 具体店名待补充</span><a class="nav-btn" href="https://uri.amap.com/search?keyword=汕头小公园" target="_blank" rel="noopener">🧭 导航</a></div>
+    </div>
+    <footer class="foot">图片与具体店名待补充；出发后可将实拍照片与点过的店补充到本页</footer>
+  </div>
+</section>
+
+<!-- ================= 5 记账 ================= -->
+<section class="page" id="page-budget">
+  <div class="page-head"><div class="wrap"><h2>💰 记账</h2><p>支出与分类汇总 · 数据待补充后更新</p></div></div>
+  <div class="wrap">
+    <div class="card">
+      <div class="warn-box" style="margin-top:0">行程资料中暂未提供已发生的支出记录（住宿、保险、餐饮、油费等），以下为记账框架与已知参考价；实际金额补充后更新本页。</div>
+    </div>
+
+    <div class="sum-card">
+      <div class="lab">本次行程总支出</div>
+      <div class="big"><span class="pend" style="background:rgba(255,255,255,.92)">待补充</span></div>
+      <div class="sum-grid">
+        <div class="g"><div class="k">已支付</div><div class="v">待补充</div></div>
+        <div class="g"><div class="k">待支付/途中</div><div class="v">待补充</div></div>
+        <div class="g"><div class="k">人均分摊（AA）</div><div class="v">待补充</div></div>
+        <div class="g"><div class="k">同行人数</div><div class="v">待补充</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="sec-title" style="margin-top:0"><span class="em">📊</span>分类汇总</div>
+      <div class="exp-row"><div class="n"><span class="em">🏨</span>住宿</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">参考：汕头候选酒店约439–484元/晚×2晚；东山岛/潮州段价格待补充</div></div>
+      <div class="exp-row"><div class="n"><span class="em">🛡️</span>保险</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">自驾意外险等</div></div>
+      <div class="exp-row"><div class="n"><span class="em">🍜</span>餐饮</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">海鲜排档、牛肉火锅、小吃夜宵等</div></div>
+      <div class="exp-row"><div class="n"><span class="em">⛽</span>油费/充电</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">全程约1875km（台州↔东山岛往返1660km + 岛内及潮汕区间）</div></div>
+      <div class="exp-row"><div class="n"><span class="em">🎫</span>过路费</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">G15沈海高速往返</div></div>
+      <div class="exp-row"><div class="n"><span class="em">🅿️</span>停车费</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">酒店/景区停车场</div></div>
+      <div class="exp-row"><div class="n"><span class="em">🎟️</span>门票</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">参考：风动石景区约45元/人（可选）；其余多为免费开放</div></div>
+      <div class="exp-row"><div class="n"><span class="em">🛍️</span>购物/伴手礼</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">Day4 汕头市区采购牛肉丸等</div></div>
+      <div class="exp-row"><div class="n"><span class="em">🧾</span>其他</div><div class="amount"><span class="pend">待补充</span></div><div class="ref">电动车租赁、观光车接驳等</div></div>
+    </div>
+    <footer class="foot">本页为只读展示，暂不支持在线编辑；支出明细可在行程表中维护后重新生成</footer>
+  </div>
+</section>
+
+<!-- ================= 6 准备 ================= -->
+<section class="page" id="page-prep">
+  <div class="page-head"><div class="wrap"><h2>🎒 准备</h2><p>通讯录 · 车辆 · 证件 · 行李 · 药品 · 出发清单（电话自动脱敏）</p></div></div>
+  <div class="wrap">
+
+    <div class="sec-title"><span class="em">👥</span>同行通讯录</div>
+    <div class="sec-sub">手机号一律脱敏显示（如 138****5678）· 名单待补充</div>
+    <div class="card">
+      <div class="contact"><div class="avatar">🧑</div><div class="info"><div class="nm">待补充</div><div class="rl">角色待补充（建议标注可轮换驾驶员）· 示例行</div></div><div class="tel" data-phone="13812345678">138****5678</div></div>
+      <div class="contact"><div class="avatar">🧑</div><div class="info"><div class="nm">待补充</div><div class="rl">角色待补充</div></div><div class="tel">待补充</div></div>
+      <div class="contact"><div class="avatar">🧑</div><div class="info"><div class="nm">待补充</div><div class="rl">角色待补充</div></div><div class="tel">待补充</div></div>
+      <div class="note">示例行仅演示脱敏格式（138****5678 为示例号码，非真实号码）；同行人名单与电话补充资料后更新，页面会对 11 位手机号自动做中间 4 位打码。</div>
+    </div>
+
+    <div class="sec-title"><span class="em">🚗</span>车辆信息</div>
+    <div class="card">
+      <div class="kv"><div class="k">出行方式</div><div class="v">自驾 · G15 沈海高速为主</div></div>
+      <div class="kv"><div class="k">车牌号</div><div class="v"><span class="pend">待补充</span></div></div>
+      <div class="kv"><div class="k">车型</div><div class="v"><span class="pend">待补充</span><div style="font-size:11.5px;color:var(--muted);margin-top:2px">避坑指南提醒"提前规划充电点"，如为新能源车请提前标注沿途充电站</div></div></div>
+      <div class="kv"><div class="k">保险/年检</div><div class="v"><span class="pend">待补充</span></div></div>
+      <div class="kv"><div class="k">驾驶安排</div><div class="v">多轮换驾驶员，不疲劳驾驶</div></div>
+    </div>
+
+    <div class="prep-grid">
+      <div>
+        <div class="sec-title"><span class="em">🪪</span>证件</div>
+        <div class="card">
+          <ul class="check-list">
+            <li><span class="box"></span><span>身份证（全员，入住/景区实名）<span class="src">通用必带</span></span></li>
+            <li><span class="box"></span><span>驾驶证（每位轮换驾驶员）<span class="src">通用必带</span></span></li>
+            <li><span class="box"></span><span>行驶证<span class="src">通用必带</span></span></li>
+            <li><span class="box"></span><span>车辆保单信息 <span class="pend">待补充</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="sec-title"><span class="em">💊</span>药品</div>
+        <div class="card">
+          <ul class="check-list">
+            <li><span class="box"></span><span><b>肠胃药</b>（海鲜+生腌易水土不服）<span class="src">攻略提示</span></span></li>
+            <li><span class="box"></span><span>晕车药 / 感冒药 / 创可贴<span class="src">通用建议</span></span></li>
+            <li><span class="box"></span><span>个人常用药 <span class="pend">待补充</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-title"><span class="em">🧳</span>行李清单</div>
+    <div class="card">
+      <ul class="check-list">
+        <li><span class="box"></span><span>防晒霜（海边紫外线强）<span class="src">攻略提示</span></span></li>
+        <li><span class="box"></span><span>薄外套（晚上海风凉）<span class="src">攻略提示</span></span></li>
+        <li><span class="box"></span><span>凉鞋 / 拖鞋（踏浪玩水）<span class="src">攻略提示</span></span></li>
+        <li><span class="box"></span><span>充电宝<span class="src">攻略提示</span></span></li>
+        <li><span class="box"></span><span>少量现金（岛上小摊可能只收现金）<span class="src">攻略提示</span></span></li>
+        <li><span class="box"></span><span>换洗衣物 / 洗漱用品 / 雨具<span class="src">通用建议</span></span></li>
+      </ul>
+    </div>
+
+    <div class="sec-title"><span class="em">✅</span>出发清单</div>
+    <div class="card">
+      <ul class="check-list">
+        <li><span class="box"></span><span>查当日<b>潮汐表</b>（南屿双面海 / 鱼骨沙洲，可用潮汐预报类APP）</span></li>
+        <li><span class="box"></span><span>确认<b>苏峰山</b>节假日限行与接驳安排</span></li>
+        <li><span class="box"></span><span>电车提前<b>规划沿途充电点</b></span></li>
+        <li><span class="box"></span><span>酒店全部确认<b>免费停车位</b>（东山金銮湾 / 潮州牌坊街外围 / 汕头市区连锁）</span></li>
+        <li><span class="box"></span><span>酒店只订<b>"可免费取消"</b>房型占位，备注"安静楼层、远离电梯"</span></li>
+        <li><span class="box"></span><span>每天 10:00 抢<b>广东文旅消费券</b>（携程/美团/飞猪/同程/云闪付）</span></li>
+        <li><span class="box"></span><span><b>错峰夜行</b>：9.30 晚 20:00 准时出发，多轮换驾驶员</span></li>
+        <li><span class="box"></span><span>返程 10.5 <b>早 6–7 点出发</b>，避开午后大堵车</span></li>
+        <li><span class="box"></span><span>伴手礼留到 Day4 汕头市区采购（牛肉丸等）</span></li>
+        <li><span class="box"></span><span>备好肠胃药 + 防晒 + 薄外套</span></li>
+      </ul>
+    </div>
+
+    <div class="sec-title"><span class="em">⚠️</span>安全与避坑速查</div>
+    <div class="card">
+      <div class="pit"><span class="cat">高速拥堵</span><p>9.30晚上、10.5全天是高峰，高速容易堵，多轮换驾驶员，不疲劳驾驶</p><span class="lv hi">高</span></div>
+      <div class="pit"><span class="cat">电车充电</span><p>提前规划充电点；服务区充电排队时，可就近下高速到市区充电</p><span class="lv hi">高</span></div>
+      <div class="pit"><span class="cat">苏峰山</span><p>节假日私家车禁止开上环岛路，车停山脚停车场，租电动车或坐接驳车上下</p><span class="lv hi">高</span></div>
+      <div class="pit"><span class="cat">潮汐安全</span><p>南屿双面海、鱼骨沙洲出行前务必查潮汐表；涨潮会被困礁石，不要冒险</p><span class="lv hi">高</span></div>
+      <div class="pit"><span class="cat">南澳大桥</span><p>国庆大桥极易堵车：早7点出发上岛，中午前下岛离开</p><span class="lv mid">中</span></div>
+      <div class="pit"><span class="cat">海鲜排档</span><p>景区门口不要吃；点菜全部问清单价，看清称重再下单</p><span class="lv hi">高</span></div>
+      <div class="pit"><span class="cat">停车</span><p>东山岛住金銮湾、潮州住牌坊街外围、汕头住市区，均需确认停车位</p><span class="lv hi">高</span></div>
+      <div class="pit"><span class="cat">防晒保暖</span><p>海边紫外线强注意防晒；带薄外套，晚上海风凉</p><span class="lv mid">中</span></div>
+      <div class="pit"><span class="cat">药品</span><p>备肠胃药（海鲜+生腌易水土不服）</p><span class="lv mid">中</span></div>
+      <div class="pit"><span class="cat">安全驾驶</span><p>夜间行车多进服务区休整，不赶路，安全第一</p><span class="lv hi">高</span></div>
+    </div>
+    <footer class="foot">
+      本手册为只读分享版，无需登录与编辑<br>内容依据《东山岛+潮汕5天6晚自驾行程表》及配套攻略整理 · 缺失信息以"待补充"标注<br><span class="aigc">AI生成内容标识 · AIGC:13804d57-d4f0-48e3-8b0d-2bed09021dae</span>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<!-- 底部固定导航栏 -->
+<nav class="tabbar" aria-label="主导航">
+  <button class="tabbtn on" data-page="home" aria-label="首页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h5v-6h4v6h5V9.5"/></svg><span>首页</span></button>
+  <button class="tabbtn" data-page="itinerary" aria-label="行程"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19c3-6 6-9 9-9 2 0 3.5 1.2 5 3"/><circle cx="19" cy="15" r="2.2"/><circle cx="5" cy="19" r="2.2"/></svg><span>行程</span></button>
+  <button class="tabbtn" data-page="hotels" aria-label="住宿"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18V7"/><path d="M3 16h18v-6H9V7H3"/><circle cx="8" cy="12.5" r="1.4" fill="currentColor" stroke="none"/></svg><span>住宿</span></button>
+  <button class="tabbtn" data-page="food" aria-label="美食"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8a2 2 0 0 0 4 0V3"/><path d="M8 11v10"/><path d="M17 3c-2 3-2.5 7-2.5 10h3c0 2-.5 5-1.5 8"/></svg><span>美食</span></button>
+  <button class="tabbtn" data-page="budget" aria-label="记账"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><circle cx="17" cy="14.5" r="1.3" fill="currentColor" stroke="none"/><path d="M7 3h10"/></svg><span>记账</span></button>
+  <button class="tabbtn" data-page="prep" aria-label="准备"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="13" rx="2.5"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M9 11v2M15 11v2"/></svg><span>准备</span></button>
+</nav>
+
+<script>
+(function(){
+  'use strict';
+  var PAGES=['home','itinerary','hotels','food','budget','prep'];
+  function show(p){
+    if(PAGES.indexOf(p)<0)return;
+    var i,secs=document.querySelectorAll('.page'),btns=document.querySelectorAll('.tabbtn');
+    for(i=0;i<secs.length;i++)secs[i].classList.toggle('active',secs[i].id==='page-'+p);
+    for(i=0;i<btns.length;i++)btns[i].classList.toggle('on',btns[i].getAttribute('data-page')===p);
+    try{if(location.hash!=='#'+p)history.replaceState(null,'','#'+p);}catch(e){}
+    window.scrollTo(0,0);
+  }
+  var i,btns=document.querySelectorAll('.tabbtn');
+  for(i=0;i<btns.length;i++)(function(b){b.addEventListener('click',function(e){e.preventDefault();show(b.getAttribute('data-page'));});})(btns[i]);
+  window.addEventListener('hashchange',function(){var h=location.hash.replace('#','');if(PAGES.indexOf(h)>=0)show(h);});
+  var initial=location.hash.replace('#','');
+  show(PAGES.indexOf(initial)>=0?initial:'home');
+
+  /* 首页每日概览/行程Day快捷跳转（滚动定位，不修改hash） */
+  var jumps=document.querySelectorAll('[data-goto]');
+  for(i=0;i<jumps.length;i++)(function(el){el.addEventListener('click',function(e){
+    var t=document.getElementById(el.getAttribute('data-goto'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });})(jumps[i]);
+
+  /* 倒计时：2026-09-30 20:00 出发；10-05 傍晚结束 */
+  var T=new Date('2026-09-30T20:00:00+08:00').getTime();
+  var E=new Date('2026-10-05T18:00:00+08:00').getTime();
+  function p2(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var n=Date.now(),box=document.getElementById('cd');if(!box)return;
+    if(n<T){
+      var s=Math.floor((T-n)/1000);
+      document.getElementById('cd-d').textContent=Math.floor(s/86400);
+      document.getElementById('cd-h').textContent=p2(Math.floor(s%86400/3600));
+      document.getElementById('cd-m').textContent=p2(Math.floor(s%3600/60));
+      document.getElementById('cd-s').textContent=p2(s%60);
+    }else if(n<E){
+      box.innerHTML='<div class="cd-live">🚗 行程进行中 · 10月5日傍晚返回台州</div>';
+      document.getElementById('cd-title').textContent='旅途愉快，注意安全';
+    }else{
+      box.innerHTML='<div class="cd-live">🌅 行程已圆满结束，欢迎回来</div>';
+      document.getElementById('cd-title').textContent='东山岛+潮汕 · 5天6晚';
+    }
+  }
+  setInterval(tick,1000);tick();
+
+  /* 电话脱敏：任何 data-phone 元素自动打码中间4位 */
+  function maskPhone(v){
+    v=String(v||'').trim();
+    return v.replace(/(\d{3})(\d{4})(?=\d)/g,'$1****');
+  }
+  var phs=document.querySelectorAll('[data-phone]');
+  for(i=0;i<phs.length;i++)phs[i].textContent=maskPhone(phs[i].getAttribute('data-phone'));
+})();
+</script>
+</body>
+</html>
